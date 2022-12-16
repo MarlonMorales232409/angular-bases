@@ -41,3 +41,22 @@
   .p-1 {
     padding: 1px;
   }
+
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+li {
+  margin: 8px 0;
+}
+
+ input {
+  display: block;
+  margin: 20px 0px ;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #555; 
+  background-color: transparent;
+ }

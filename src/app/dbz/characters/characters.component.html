@@ -1,0 +1,8 @@
+<h3>Characters</h3>
+        <hr>
+        <br>
+        <ul>
+           <li *ngFor="let character of listOfCharacters">
+                {{ character.name }} - {{ character.power | number}}
+            </li>
+        </ul>
