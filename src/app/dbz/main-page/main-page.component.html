@@ -8,27 +8,13 @@
     <div class="col">
         
         <app-characters></app-characters>
+    
     </div>
+
     <div class="col">
-        <h3>Add a new One</h3>
-        <hr>
-        <br>
-        <form (ngSubmit)="submit()">
-            <input 
-                type="text" 
-                placeholder="Name"
-                name="name"
-                [(ngModel)]="character.name"
-            >
-                <!-- [value]="character.name" -->
-            <input 
-                placeholder="Power"
-                type="number" 
-                name="power"
-                [(ngModel)]="character.power"
-            >
-                <!-- [value]="character.power" -->
-            <button type="submit">Agregar</button>
-        </form>
+
+        <app-add [character]="character">
+        </app-add>
+    
     </div>
 </div>

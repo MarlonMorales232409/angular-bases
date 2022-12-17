@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
-interface Character {
-  name  : string,
-  power : number,
-  
-}
+import { Character } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
+
 
 @Component({
   selector: 'app-main-page',
@@ -13,43 +11,15 @@ interface Character {
 })
 export class MainPageComponent {
 
-  public listOfCharacters: Character[] = [
 
-    {
-      name: 'Goku',
-      power: 15000,
-    },
-    {
-      name: 'Vegetta',
-      power: 13000,
-    },
-    {
-      name: 'Krillin',
-      power: 10000,
-    }
-
-  ]
 
   public character: Character = {
-    name  : '',
-    power : 0
+    name  : 'Master Roshi',
+    power : 10000
 
   }
 
-  submit(){
-
-    if(this.character.name.trim().length < 1) return
-
-    console.log(this.character)
-
-    this.listOfCharacters.push(this.character)
-
-    this.character = {
-      name : '',
-      power: 0
-    }
-
+  constructor(private dbzService: DbzService){
+    
   }
-
-
 }
